@@ -99,7 +99,8 @@ if(!s)return'';
 mv+=s.moves;cu=s.end;
 cb=cb.filter(b=>!r.bs.includes(b)).concat(r.gs)}
 return mv}
+let I=process.env.MAKEFUN_INPUT_DIR||'/input',O=process.env.MAKEFUN_OUTPUT_DIR||'/output';
 for(let i=1;i<6;i++){let id='i00'+i;
-let t=f.readFileSync('/input/'+id+'/level.txt','utf8'),m=V(t);
-f.mkdirSync('/output/'+id,{recursive:!0});
-f.writeFileSync('/output/'+id+'/solution.txt',m)}
+let t=f.readFileSync(I+'/'+id+'/level.txt','utf8'),m=V(t);
+f.mkdirSync(O+'/'+id,{recursive:!0});
+f.writeFileSync(O+'/'+id+'/solution.txt',m)}
